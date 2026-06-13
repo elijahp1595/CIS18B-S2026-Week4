@@ -4,5 +4,6 @@ public class EmailAlertObserver implements AlertObserver {
     @Override
     public void onAlert(Alert alert) {
         // TODO: Print an email notification message.
+        System.out.println("Email notification sent for alert: " + alert.message());
     }
 }

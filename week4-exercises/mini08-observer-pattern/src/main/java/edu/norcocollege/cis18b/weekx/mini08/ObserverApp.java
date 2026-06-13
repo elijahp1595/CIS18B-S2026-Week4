@@ -6,5 +6,12 @@ public class ObserverApp {
 
         // TODO: Register at least two observers.
         // TODO: Process one alert.
+
+        service.addObserver(new EmailAlertObserver());
+        service.addObserver(new LogAlertObserver());
+
+        Alert alert = new Alert(1, "Unauthorized login attempt", AlertLevel.CRITICAL);
+
+        service.processAlert(alert);
     }
 }
