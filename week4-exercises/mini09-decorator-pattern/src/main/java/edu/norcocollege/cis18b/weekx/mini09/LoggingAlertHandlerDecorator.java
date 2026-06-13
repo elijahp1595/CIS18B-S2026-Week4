@@ -12,5 +12,8 @@ public class LoggingAlertHandlerDecorator implements AlertHandler {
         // TODO: Print a message before delegating.
         // TODO: Call the wrapped handler.
         // TODO: Print a message after delegating.
+        System.out.println("LOG: Alert received");
+        wrapped.handle(alert);
+        System.out.println("LOG: Alert processed");
     }
 }
