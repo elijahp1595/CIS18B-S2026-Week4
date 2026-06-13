@@ -1,1 +1,13 @@
 TODO: Replace this text with your debugging notes.
+
+The bug was in the for loop condition. The loop used i <= alerts.length, which 
+allowed i to become 3.
+
+The alerts array has 3 elements, so the valid indexes are 0, 1, and 2. When i became 3, the program
+tried to access alerts[3], which caused an ArrayIndexOutofBoundsException.
+
+I found the bug by running the program and checking the exception message. The 
+exception showed Index 3 out of bounds for length 3 and pointed to the line that
+used alerts[i].
+
+The fix was changing i <= alerts.length to i < alerts.length.
